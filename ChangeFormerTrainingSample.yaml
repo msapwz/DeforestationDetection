@@ -1,0 +1,40 @@
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-run-train37
+spec:
+  template:
+    spec:
+      containers:
+      - name: pod-process
+        image: gitlab-registry.nrp-nautilus.io/msapwz/container_cf
+        workingDir: /dataset
+        command: ["/bin/sh","-c"]
+        args:
+        - "CUDA_VISIBLE_DEVICES=0,1,2,3 python3 /dataset/ChangeFormer/main_cd.py --img_size 512 --loss miou --checkpoint_root /dataset/area_89/ChangeFormer/new_processing3/checkpoints --vis_root /dataset/area_89/ChangeFormer/new_processing3/vis --lr_policy linear --optimizer adamw --split train --split_val test --net_G ChangeFormerV6 --multi_scale_train True --multi_scale_infer False --gpu_ids 0,1,2,3 --max_epochs 200 --project_name CD_1681295497.939405_ChangeFormerV6_Deforestation-512-NGB_b4_lr0.0001_adamw_train_test_200_linear_miou_multi_train_True_multi_infer_False_shuffle_AB_False_embed_dim_256 --batch_size 4 --shuffle_AB False --data_name Deforestation-512-NGB --lr 0.0001 --embed_dim 256 --pretrain /dataset/ChangeFormer/pretrained_changeformer.pt"
+        volumeMounts:
+        - name: dataset
+          mountPath: /dataset
+        - name: dshm
+          mountPath: /dev/shm
+        resources:
+          limits:
+            memory: 64Gi
+            cpu: 4
+            nvidia.com/gpu: "4"
+          requests:
+            memory: 64Gi
+            cpu: 4
+            nvidia.com/gpu: "4" 
+      volumes:
+      - name: dataset
+        persistentVolumeClaim:
+            claimName: volume-deforestation-project-many
+      - name: dshm
+        emptyDir:
+          medium: Memory
+          sizeLimit: 64Gi
+      restartPolicy: Never
+        
+    backoffLimit: 
