@@ -49,7 +49,7 @@ To successfully run the training, the `DataConfig` class in the [`data_config.py
 The provided Jupyter Notebook file facilitates the automatic generation of YAML configuration files necessary for executing the training process. An example YAML file is included in the same directory for reference.
 
 ## Citation
-If you use this model or any part of this repository in your research or professional projects, please cite the following paper and include the URL link:
+If you use this repository in your research, please cite the following paper:
 
 Alshehri, Mariam, Anes Ouadou, and Grant J. Scott. "Deep Transformer-based Network Deforestation Detection in the Brazilian Amazon Using Sentinel-2 Imagery." IEEE Geoscience and Remote Sensing Letters (2024). [Available online](https://ieeexplore.ieee.org/document/10402113)
 
