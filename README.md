@@ -38,7 +38,7 @@ This command will automatically download the Sentinel-2 tiles, using the provide
 
 After completing Step 1, follow the instructions below:
 
-1. **Tile Selection:** Carefully review and manually select the highest quality tiles for use in the subsequent steps of the pipeline.
+1. **Tile Selection:** Carefully review and manually select the highest quality tiles for use in the subsequent steps of the pipeline. The selected tile IDs are recorded in the `selected.txt` file for exact replication of the data.
 
 2. **Execute Remaining Steps:** With the optimal tiles selected, proceed to execute Steps 2, 3, 4, and 5.
 
@@ -47,4 +47,11 @@ After completing Step 1, follow the instructions below:
 To successfully run the training, the `DataConfig` class in the [`data_config.py`](https://github.com/wgcban/ChangeFormer/blob/main/data_config.py) in [ChangeFormer](https://github.com/wgcban/ChangeFormer) must be updated with the appropriate dataset folder path.
 
 The provided Jupyter Notebook file facilitates the automatic generation of YAML configuration files necessary for executing the training process. An example YAML file is included in the same directory for reference.
+
+## Citation
+If you use this model or any part of this repository in your research or professional projects, please cite the following paper and include the URL link:
+
+Alshehri, Mariam, Anes Ouadou, and Grant J. Scott. "Deep Transformer-based Network Deforestation Detection in the Brazilian Amazon Using Sentinel-2 Imagery." IEEE Geoscience and Remote Sensing Letters (2024). [Available online](https://ieeexplore.ieee.org/document/10402113)
+
+
 
