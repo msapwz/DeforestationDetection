@@ -48,6 +48,10 @@ To successfully run the training, the `DataConfig` class in the [`data_config.py
 
 The provided Jupyter Notebook file facilitates the automatic generation of YAML configuration files necessary for executing the training process. An example YAML file is included in the same directory for reference.
 
+## Downloading the Dataset
+
+You can replicate the exact dataset used in this project by utilizing the `selected.txt` file provided in the repository. Alternatively, you can download the entire dataset. To do so, ensure you have Git and Git LFS installed on your system. You can install Git from [git-scm.com](https://git-scm.com/) and Git LFS from [git-lfs.github.com](https://git-lfs.github.com/).
+
 ## Citation
 If you use this repository in your research, please cite the following paper:
 
