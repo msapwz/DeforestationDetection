@@ -50,9 +50,10 @@ The provided Jupyter Notebook file facilitates the automatic generation of YAML 
 
 ## Downloading the Dataset
 
-You can replicate the exact dataset used in this project by utilizing the `selected.txt` file provided in the repository. Alternatively, you can download the entire dataset. To do so, ensure you have Git and Git LFS installed on your system. You can install Git from [git-scm.com](https://git-scm.com/) and Git LFS from [git-lfs.github.com](https://git-lfs.github.com/).
+You can replicate the exact dataset used in this project by utilizing the `selected.txt` file provided in the repository, or download the comprehensive dataset, `DeforestationAmazon.zip`. To ensure a smooth process, make sure you have Git and Git LFS installed on your system. Install Git from [git-scm.com](https://git-scm.com/) and Git LFS from [git-lfs.github.com](https://git-lfs.github.com/).
 
 ## Citation
+
 If you use this repository in your research, please cite the following paper:
 
 Alshehri, Mariam, Anes Ouadou, and Grant J. Scott. "Deep Transformer-based Network Deforestation Detection in the Brazilian Amazon Using Sentinel-2 Imagery." IEEE Geoscience and Remote Sensing Letters (2024). [Available online](https://ieeexplore.ieee.org/document/10402113)
